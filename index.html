@@ -1,1 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>漫遊攸潭美</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>漫遊攸潭美</h1>
+        <p>攸潭美村數碼文化館</p>
+    </header>
+
+    <section class="intro">
+        <p>
+            歡迎來到攸潭美村互動文化地圖。
+            點擊地圖上的地標，探索村落歷史、宗教信仰、教育發展、
+            農業文化、交通故事及麒麟文化。
+        </p>
+    </section>
+
+    <div class="map-container">
+
+        images/map.jpg
+
+        <!-- 姚聖母廟 -->
+        <button class="marker" style="top:18%;left:58%;"
+            onclick="openLocation(
+            '姚聖母廟',
+            ['images/temple1.jpg','images/temple2.jpg'],
+            '姚聖母廟是攸潭美村重要信仰中心，保存姚聖母信仰文化及珍貴歷史。')">
+            ⛩️
+        </button>
+
+        <!-- 村公所 -->
+        <button class="marker" style="top:60%;left:68%;"
+            onclick="openLocation(
+            '攸潭美村公所',
+            ['images/committee.jpg'],
+            '村公所是社區活動及村務中心，保存豐富村史資料。')">
+            🏛️
+        </button>
+
+        <!-- 學校 -->
+        <button class="marker" style="top:38%;left:46%;"
+            onclick="openLocation(
+            '攸潭美學校',
+            ['images/school.jpg'],
+            '攸潭美學校培育多代學生成長，圖書室於1972年建成。')">
+            🏫
+        </button>
+
+        <!-- 老榕樹 -->
+        <button class="marker" style="top:56%;left:60%;"
+            onclick="openLocation(
+            '百年護村老榕樹',
+            ['images/tree.jpg'],
+            '老榕樹已有超過一百年歷史，被視為村落守護樹。')">
+            🌳
+        </button>
+
+        <!-- 菜站 -->
+        <button class="marker" style="top:70%;left:35%;"
+            onclick="openLocation(
+            '西區菜站',
+            ['images/farm1.jpg'],
+            '村民種植的新鮮蔬菜會送到菜站統一處理。')">
+            🥬
+        </button>
+
+        <!-- 小巴 -->
+        <button class="marker" style="top:80%;left:48%;"
+            onclick="openLocation(
+            '躉頭小巴站',
+            ['images/bus.jpg'],
+            '村民爭取增加特別班次，方便街坊每日出入。')">
+            🚐
+        </button>
+
+        <!-- 泰國廟 -->
+        <button class="marker" style="top:60%;left:85%;"
+            onclick="openLocation(
+            '泰國佛堂',
+            ['images/thai1.jpg'],
+            '泰國佛堂展現攸潭美多元文化及宗教特色。')">
+            🛕
+        </button>
+
+    </div>
+
+    <div id="popup" class="popup">
+
+        <div class="popup-content">
+
+            <span class="close" onclick="closePopup()">&times;</span>
+
+            <h2 id="title"></h2>
+
+            <div class="slider">
+                <img id="slideImage">
+            </div>
+
+            <div class="slider-buttons">
+                <button onclick="prevImage()">上一張</button>
+                <button onclick="nextImage()">下一張</button>
+            </div>
+
+            <p id="description"></p>
+
+        </div>
+
+    </div>
+
+    <section class="qrcode">
+
+        <h2>QR Code 導覽</h2>
+
+        <p>
+            掃描 QR Code 探索攸潭美村。
+        </p>
+
+        https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://ntmgordon.github.io/NTMMAP/
+
+        <p>
+            https://ntmgordon.github.io/NTMMAP/
+        </p>
+
+    </section>
+
+    <footer>
+        © 攸潭美村數碼文化館
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
